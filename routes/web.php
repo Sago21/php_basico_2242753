@@ -33,3 +33,23 @@ print_r($estudiantes);
 echo "<pre>";
 });
 
+
+
+route::get('paises', function(){
+    $paises = [
+        "colombia" => ['capital' => 'bogota',
+    'moneda' => 'peso colombiano',
+'poblacion' => '51'],
+        "peru" => ['capital' => 'Lima',
+        'moneda' => 'sol',
+    'poblacion' => 7],
+        "paraguay" =>['capital' => 'Asuncion',
+        'moneda' => 'Guaraní paraguayo',
+    'poblacion' => 10]
+    ];
+
+    return view  ('paises')->with('naciones',$paises);
+
+});
+
+
